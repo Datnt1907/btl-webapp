@@ -1,0 +1,237 @@
+<html>
+	<head>
+		<title>Danh sách Cửa hàng</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_store_agent.css" />
+		<link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+		<meta charset="UTF-8">
+		<script src="js/jquery-3.6.0.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				var cart = sessionStorage.getItem("cart");
+				var order = "["+cart+"]";
+				var data = JSON.parse(order);
+				$("#soluong").text(data.length);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="frame">
+		
+			<!--header-->
+			<div id="header">
+				<div id="head-top">
+					<div id="login-signup">	
+											
+						<a href="signup.html">Đăng ký</a><b>/</b><a href="login.html"><i class="fas fa-user"></i>Đăng nhập</a> <!--Icon Login-Signup-->
+						
+					</div>
+				</div>
+				<div id="head">
+				
+						<a href="index.html"><img id="anh-logo" src="Anh/logo.png" /></a>
+						<img id="anh-logoNCC" src="Anh/logoNCC.png" />
+						
+						<div id="kinhlup">
+							<img id="anh-kinhlup" src="Anh/kinhlup.jpg"/>
+						</div>
+						
+						<input id="thanhtimkiem" type="text" placeholder="Tìm kiếm sản phẩm"/>
+						<input id="nuttimkiem" type="button" value="Tìm kiếm" />
+						
+						<div id="contact">
+							<img id ="anh-tainghe" src="Anh/tainghe.png" />
+							<a href="tel:1900111222">Liên hệ</a>
+							<a href="tel:1900111222">1900.111.222</a>
+						</div>
+						
+						<div id="cart">
+							<a href="cart.html"><img id="anh-giohang" src="Anh/cart.png" /></a>
+							<a class="info-cart" id= "giohang"  href="cart.html">Giỏ hàng</a>
+							<a id="soluong" class="info-cart">0</a>
+						</div>
+				</div>
+				
+				<!--menu 2 cấp-->
+				<div id="menu">
+					<div id="nav">
+						<ul>
+							<li><a id ="danhmucsp">DANH MỤC SẢN PHẨM</a>
+								<ul id="ds-danhmuc">
+									<li><a href="brandG-Shock.html"><b>G-Shock</b></a></li>
+									<li><a href="brandBaby-G.html"><b>Baby-G</b></a></li>
+									<li><a href="brandEdifice.html"><b>Edifice</b></a></li>
+									<li><a href="brandSheen.html"><b>Sheen</b></a></li>
+									<li><a href="brandGeneral.html"><b>General</b></a></li>
+									<li><a href="limited.html"><b>Limited</b></a></li>
+								</ul>
+							</li>
+							<li><a href="index.html">TRANG CHỦ</a></li>
+							<li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+							<li><a href="limited.html">LIMITED</a></li>
+							<li><a href="khuyenmai.html">KHUYẾN MÃI</a></li>
+							<li><a href="tintuc.html">TIN TỨC</a>
+								<ul id="ds-danhmuc">
+									<li><a href="tintuc.html"><b>Tin tức</b></a></li>
+									<li><a href="tinkhuyenmai.html"><b>Tin khuyến mãi</b></a></li>
+									<li><a href="tuyendung.html"><b>Tuyển dụng</b></a></li>								
+									<li><a href="donghocasio.html"><b>Đồng hồ Casio</b></a></li>
+								</ul>
+							</li>
+							<li><a>LIÊN HỆ</a>
+								<ul id="ds-danhmuc">
+									<li><a href="store.html"><b>Cửa hàng</b></a></li>
+									<li><a href="agent.html"><b>Đại lý</b></a></li>
+									<li><a href="service-center.html"><b>Trung tâm bảo hành</b></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!--Container-->
+			<div id="container">
+				<div id="content">
+					<div id="title">
+						<a>DANH SÁCH CỬA HÀNG</a>
+					</div>
+					<div id="left">
+						<div id="address">
+							<button class="address-content" id="address-1">
+								<img src="Anh/logoCH.png"/> 
+								<a id="big-address">CASIO 30 ĐÔNG CÁC</a> 
+								<p id="text-address">Số 15 Ô Chợ Dừa, P.Ô Chợ Dừa, Q.Đống Đa, Hà Nội</p> <br />
+								<a id="text-phone" href="tel:02435135672">Phone: (024) 3513 5672</a> 
+						
+							</button>
+						</div>
+						
+						<div id="address">
+							<button class="address-content" id="address-2" >
+								<img src="Anh/logoCH.png"/> 
+								<a id="big-address">CASIO BẠCH MAI</a> 
+								<p id="text-address">128 Bạch Mai, Cầu Dền, Hai Bà Trưng, Hà Nội, Việt Nam</p> 
+								<a id="text-phone" href="tel:02438682014">Phone: 024.3868.2014</a> 
+						
+							</button>
+						</div>
+						
+						<div id="address">
+							<button class="address-content" id="address-3">
+								<img src="Anh/logoCH.png"/> 
+								<a id="big-address">CASIO AEON BÌNH DƯƠNG</a> 
+								<p id="text-address">TTTM Aeon Bình Dương, Đại Lộ Bình Dương, Thị xã Thuận An, Tỉnh Bình Dương</p> 
+								<a id="text-phone" href="tel:02746558066">Phone: (0274) 6558 066</a> 
+						
+							</button>
+						</div>
+						
+						<div id="address">
+							<button class="address-content" id="address-4">
+								<img src="Anh/logoCH.png"/> 
+								<a id="big-address">CASIO AEON BÌNH TÂN</a> 
+								<p id="text-address">Lô 1- Hưng Phú, I, KDC Hưng Phú 1, Cái Răng, Cần Thơ, Việt Nam</p> 
+								<a id="text-phone" href="tel:02923811238">Phone: 0292 3811 238</a> 
+						
+							</button>
+						</div>
+						
+						<div id="address">
+							<button class="address-content" id="address-5">
+								<img src="Anh/logoCH.png"/> 
+								<a id="big-address">CASIO AEON LONG BIÊN</a> 
+								<p id="text-address">Tầng 2 TTTM Aeon Mall Long Biên, Số 27 Đường Cổ Linh, Quận Long Biên, Hà Nội</p> 
+								<a id="text-phone" href="tel:02463289755">Phone: (024) 63289755</a> 
+						
+							</button>
+						</div>
+						
+						<div id="address">
+							<button class="address-content" id="address-6">
+								<img src="Anh/logoCH.png"/> 
+								<a id="big-address">CASIO AEON TÂN PHÚ</a> 
+								<p id="text-address">TTTM Aeon Celadon Tân Phú, 30 Bờ Bao Tân Thắng, P.Sơn Kỳ, Q.Tân phú, TP.HCM</p> 
+								<a id="text-phone" href="tel:02862692067">Phone: 0286 2692 067</a> 
+						
+							</button>
+						</div>
+						
+					</div>
+					
+					<div id="right">		
+						<iframe id="map1" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d476964.80823630054!2d105.80259836928563!3d20.940963907888772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d20.9491892!2d106.3346064!4m5!1s0x3135ab787850be6d%3A0xccde049a4ae5c315!2zMTUgUC4gw5QgQ2jhu6MgROG7q2EsIENo4bujIEThu6thLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lp!3m2!1d21.0186884!2d105.8288571!5e0!3m2!1svi!2s!4v1652198145099!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	
+						
+						<iframe id="map2" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d476964.80823630054!2d105.80777396928565!3d20.94096390788878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d20.948070599999998!2d106.324649!4m5!1s0x3135ade4b5f3fd7f%3A0x5ef083b943941f35!2zQ2FzaW8gQW5oIEtodcOqLCAxMjggUC4gQuG6oWNoIE1haSwgQ-G6p3UgROG7gW4sIEhhaSBCw6AgVHLGsG5nLCBIw6AgTuG7mWk!3m2!1d21.005938099999998!2d105.85111409999999!5e0!3m2!1svi!2s!4v1652352632394!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						
+						<iframe id="map3" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d7858758.166719747!2d102.04358500435447!3d15.89417187947426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d20.9491892!2d106.3346064!4m5!1s0x3175281ca7aa9583%3A0xbd4e60821b659919!2zQ0FTSU8gQUVPTiBCw4xOSCBExq_GoE5HIFRUVE0gQWVvbiBCw6xuaCBExrDGoW5nLCDEkOG6oWkgTOG7mSBCw6xuaCBExrDGoW5nLCBUaOG7iyB4w6MgVGh14bqtbiBBbiwgVOG7iW5oIELDrG5oIETGsMahbmc!3m2!1d10.9323347!2d106.7119938!5e0!3m2!1svi!2s!4v1652352928162!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						
+						<iframe id="map4" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d7876373.557307355!2d102.60385608605026!3d15.436728612690096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d20.9491892!2d106.3346064!4m5!1s0x31a06283c2c7350f%3A0xe04bb818812a8ec7!2zS0RDIEjGsG5nIFBow7ogMSwgSMawbmcgUGjDuiwgQ8OhaSBSxINuZywgQ-G6p24gVGjGoQ!3m2!1d10.0202092!2d105.7864697!5e0!3m2!1svi!2s!4v1652353086130!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						
+						<iframe id="map5" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d476975.71186896454!2d105.83778076821042!3d20.937540938362183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d20.9491892!2d106.3346064!4m5!1s0x3135a96a85453f37%3A0x39ce34aaf20a939!2zVOG6p25nIDIgVFRUTSBBZW9uIE1hbGwgTG9uZyBCacOqbiwgU-G7kSAyNyDEkMaw4budbmcgQ-G7lSBMaW5oLCBRdeG6rW4gTG9uZyBCacOqbiwgSMOgIE7hu5lp!3m2!1d21.0269369!2d105.8988741!5e0!3m2!1svi!2s!4v1652353208270!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						
+						<iframe id="map6" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d7861309.854956137!2d102.04357303807504!3d15.828706956677852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d20.9491892!2d106.3346064!4m5!1s0x31752b9535b60699%3A0x4737f3be8bd41d5b!2zVFRUTSBBZW9uIENlbGFkb24gVMOibiBQaMO6LCAzMCBC4budIEJhbyBUw6JuIFRo4bqvbmcsIFAuU8ahbiBL4buzLCBRLlTDom4gcGjDuiwgVFAuSENN!3m2!1d10.8011622!2d106.61739449999999!5e0!3m2!1svi!2s!4v1652353289796!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						
+					</div>
+				</div>
+				
+				<script src="Js/java_store_agent.js"> </script>
+				
+				
+			</div>
+			
+			<!--footer-->
+			<div id="footer">
+				<div id="info-website">
+				
+					<!--info 1-->
+					<div id="info1">
+						<span><b>CASIO HOÀNG PHÚ</b></span><br />
+						<a>Địa chỉ: Số 2/24/441, Phường Bình Hàn, Thành phố Hải Dương.</a><br /><br />
+						<a>Tư vấn mua hàng (8:00-17:00): 1900.111.222 (Phím 1) </a><br /><br />
+						<a>Chăm sóc khách hàng: 1900.111.222 (Phím 2) </a><br /><br />
+						<a>Gmail: donghohoangphu@gmail.com</a>
+					</div>
+					
+					<!--info 2-->
+					<div id="info2">
+						<span><b>THÔNG TIN</b></span><br />
+						<a href="gioithieu.html">Giới thiệu</a><br /><br />
+						<a href="#">Lịch sử hình thành </a><br /><br />
+						<a href="#">Tầm nhìn và sứ mệnh</a><br /><br />
+						<a href="#">Website Casio</a>
+					</div>
+					
+					<!--info 3-->
+					<div id="info2">
+						<span><b>HỖ TRỢ</b></span><br />
+						<a href="#">Hướng dẫn thanh toán</a><br /><br />
+						<a href="#">Hướng dẫn mua hàng online</a><br /><br />
+						<a href="#">Chính sách khách hàng thân thiết</a><br /><br />
+					</div>
+					
+					<!--info 4-->
+					<div id="info2">
+						<span><b>CHÍNH SÁCH</b></span><br />
+						<a href="#">Điều khoản dịch vụ</a><br /><br />
+						<a href="#">Quy định đổi trả</a><br /><br />
+						<a href="#">Quy định bảo hành</a><br /><br />
+						<a href="#">Trung tâm bảo hành</a><br /><br />
+						<a href="#">Chính sách bảo mật</a>
+					</div>
+					
+					<img id="anh-logo-casio" src="Anh/logo-casio.png"/>
+					<img id="anh-pay" src="Anh/payment.png"/>
+				</div>
+			</div>
+			
+			<div id="banquyen">
+				<div id="copyright">
+					<a href="index.html"><img id="logo-banquyen" src="Anh/logo.png" /></a>
+					<a>@Bản quyền thuộc về CASIO Hoàng Phú - Developed by ĐạtNT.</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,127 @@
+/*Container thanh toán*/
+#container-thanhtoan{
+	width: 1180px;
+	min-height: 600px;
+	margin: 0px auto;
+	margin-top: 0px;
+}
+#duongdan a{
+	font-size: 14px;
+	color: #8E8E8E;
+	line-height: 50px;
+}
+#duongdan a:hover{
+	color: #EC1C24;
+	line-height: 50px;
+	box-shadow: 0 1px #EC1C24;
+}
+/*chọn phương thức*/
+#phuongthuc-thanhtoan{
+	width: 62%;
+	min-height: 535px;
+	float: left;
+	margin-right: 20px;
+	background-color: #FFF;
+}
+#phuongthuc-thanhtoan h3{
+	background-color: #EEE;
+	padding: 15px;
+	line-height: 40px;
+	margin: 0px;
+	border-radius: 10px;
+}
+.chonphuongthuc-thanhtoan{
+	width: 32%;
+	height: 250px;
+	float: left;
+	margin-left: 8px;
+	border: 1px solid #DDD;
+	margin-top: 20px;
+}
+.chonphuongthuc-thanhtoan h4{
+	padding: 15px;
+	line-height: 30px;
+	margin: 0px;
+	border-radius: 10px;
+	font-size: 14px;
+}
+.chonphuongthuc-thanhtoan input{
+	margin: 15px 10px 0px 12px;
+}
+.nutan{
+	background-color: red;
+	width: 355px;
+	height: 50px;
+	border-radius: 10px;
+	border: none;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 20px;
+	float: left; 
+	margin-right: 10px;
+}
+.nutan:hover{
+	opacity: 0.8;
+}
+/*Thông tin thanh toán*/
+#thongtin-thanhtoan{
+	width: 36%;
+	min-height: 340px;
+	background-color: #DDD;
+	float: left;
+}
+#giaohangtoi-thanhtoan{
+	min-height: 100px;
+	border: 1px solid #DDD;
+	padding-left: 15px;
+	background-color: #FFF;
+	margin-bottom: 33px;
+	padding-right: 15px;
+}
+#thanhtien-thanhtoan{
+	border: 1px solid #DDD;
+	padding-left: 15px;
+	background-color: #FFF;
+	padding-right: 15px;
+	margin-bottom: 33px;
+	height: 121px;
+}
+#thanhtien-thanhtoan span{
+	font-weight: bold;
+	float: right;
+	color: red;
+}
+
+/*Thay đổi thông tin*/
+#thaydoi-thongtin{
+	border: 1px solid #DDD;
+	padding-left: 10px;
+	background-color: #FFF;
+	padding-right: 5px;
+	height: 130px;
+	display: none;
+}
+.o-thaydoi{
+	margin-left: 30px;
+	height: 30px;
+	width: 255px;
+	float: right;
+}
+.nutthaydoi{
+	background-color: red;
+	width: 180px;
+	height: 50px;
+	border-radius: 10px;
+	border: none;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+	display: none;
+	margin: 20px 20px 10px 0px;
+	float: left;
+}
+
+.nutthaydoi:hover{
+	opacity: 0.8;
+}

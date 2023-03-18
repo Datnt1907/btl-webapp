@@ -1,0 +1,137 @@
+/*Container giỏ hàng*/
+#container-cart{
+	width: 1180px;
+	min-height: 500px;
+	margin: 0px auto;	
+	margin-top: 0px;
+}
+#duongdan a{
+	font-size: 14px;
+	color: #8E8E8E;
+	line-height: 50px;
+}
+#duongdan a:hover{
+	color: #EC1C24;
+	line-height: 50px;
+	box-shadow: 0 1px #EC1C24;
+}
+
+/*nội dung giỏ hàng*/
+#container-cart h3{	
+	background-color: #EEE;
+	padding: 15px;
+	line-height: 40px;
+	margin: 0px;
+	border-radius: 10px;
+}
+/*Định dạng bảng*/
+#container-cart table{
+	border: 1px solid #CCC;
+	margin: 20px 30px 0px 0px;
+	width: 100%;
+	line-height: 50px;
+	background-color: #EEE;
+}
+/*Định dạng hàng tiêu đề*/
+#container-cart th{
+	
+}
+/*Định dạng sản phẩm---------------------------------------------*/
+#container-cart td{
+	background-color: #FFF;
+}
+/*Định dạng cột 1 và 2 và 3*/
+#container-cart td:nth-child(1), td:nth-child(2), td:nth-child(3){
+	text-align: center;
+}
+/*Định dạng cột 4 và 6*/
+#container-cart td:nth-child(4), td:nth-child(6){
+	text-align: center;
+	color: red;
+}
+
+/*Định dạng cột 5*/
+#container-cart td:nth-child(5){
+	text-align: center;
+	color: red;
+}
+#container-cart td:nth-child(5) input[type='number']{
+	text-align: center;
+	line-height: 24px;
+	width: 40px;
+	margin-left: -6px;
+}
+#container-cart td:nth-child(5) input[type='button']{
+	text-align: center;
+	height: 30px;
+	width: 40px;
+	margin-left: -6px;
+}
+
+/*Định dạng cột 7*/
+#container-cart td:nth-child(7){
+	text-align: center;
+	cursor: pointer;
+}
+.cart-item-img{
+	width: 120px;
+	height: 110px;
+}
+.thungrac{
+	width: 30px;
+	height: 30px;
+}
+.thungrac:hover{
+	opacity: 0.8;
+	height: 33px;
+}
+/*nội dung mua hàng - pay cart*/
+#pay-cart{
+	margin-top: 50px;
+	width: 100%;
+	height: 260px;
+	background-color: #FFF;
+	margin-bottom: 20px;
+}
+
+#pay-cart a{
+	color: black;
+	font-size: 24px;
+	padding-left: 600px;
+}
+#pay-cart span{
+	float: right;
+	font-size: 24px;
+}
+#tong{
+	color: red !important;
+}
+.nut{
+	color: #FFF;
+	background-color: #EC1C24;
+	width: 24.7%;
+	height: 36px;
+	border: 0px;
+	cursor: pointer;
+}
+.nut:hover{
+	opacity: 0.9;
+}
+
+/*hướng dẫn*/
+#huongdan{
+	width: 300px;
+	text-align: center;
+	margin-left: 445px;
+}
+#noidung-huongdan{
+	width: 100%;
+	min-height: 200px;
+	border: 1px solid #CCC;
+	padding-left: 20px;
+	margin-top: 20px;
+	display: none;
+}
+#noidung-huongdan p{
+	font-size: 18px;
+}

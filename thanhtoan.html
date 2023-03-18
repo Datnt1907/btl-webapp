@@ -1,0 +1,240 @@
+<html>
+	<head>
+		<title>Hoàng Phú | Thanh toán</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_thanhtoan.css" />
+		<meta charset="UTF-8">
+		
+		<script src="Js/jquery-3.6.0.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				var cart = sessionStorage.getItem("cart");
+				var order = "["+cart+"]";
+				var data = JSON.parse(order);
+				$("#soluong").text(data.length);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="frame">
+		
+			<!--header-->
+			<div id="header">
+				<div id="head-top">
+					<div id="login-signup">
+						<a href="signup.html">Đăng ký</a><b>/</b><a href="login.html">Đăng nhập</a>
+					</div>
+				</div>
+				<div id="head">
+				
+						<a href="index.html"><img id="anh-logo" src="Anh/logo.png" /></a>
+						<img id="anh-logoNCC" src="Anh/logoNCC.png" />
+						
+						<div id="kinhlup">
+							<img id="anh-kinhlup" src="Anh/kinhlup.jpg"/>
+						</div>
+						
+						<input id="thanhtimkiem" type="text" placeholder="Tìm kiếm sản phẩm" />
+						<input id="nuttimkiem" type="button" value="Tìm kiếm" />
+						
+						<div id="contact">
+							<img id ="anh-tainghe" src="Anh/tainghe.png" />
+							<a href="tel:1900111222">Liên hệ</a>
+							<a href="tel:1900111222">1900.111.222</a>
+						</div>
+						
+						<div id="cart">
+							<a href="cart.html"><img id="anh-giohang" src="Anh/cart.png" /></a>
+							<a class="info-cart" id= "giohang"  href="cart.html">Giỏ hàng</a>
+							<a id="soluong" class="info-cart">0</a>
+						</div>
+				</div>
+				
+				<!--menu 2 cấp-->
+				<div id="menu">
+					<div id="nav">
+						<ul>
+							<li><a id ="danhmucsp">DANH MỤC SẢN PHẨM</a>
+								<ul id="ds-danhmuc">
+									<li><a href="brandG-Shock.html"><b>G-Shock</b></a></li>
+									<li><a href="brandBaby-G.html"><b>Baby-G</b></a></li>
+									<li><a href="brandEdifice.html"><b>Edifice</b></a></li>
+									<li><a href="brandSheen.html"><b>Sheen</b></a></li>
+									<li><a href="brandGeneral.html"><b>General</b></a></li>
+									<li><a href="limited.html"><b>Limited</b></a></li>
+								</ul>
+							</li>
+							<li><a href="index.html">TRANG CHỦ</a></li>
+							<li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+							<li><a href="limited.html">LIMITED</a></li>
+							<li><a href="khuyenmai.html">KHUYẾN MÃI</a></li>
+							<li><a href="tintuc.html">TIN TỨC</a>
+								<ul id="ds-danhmuc">
+									<li><a href="tintuc.html"><b>Tin tức</b></a></li>
+									<li><a href="tinkhuyenmai.html"><b>Tin khuyến mãi</b></a></li>
+									<li><a href="tuyendung.html"><b>Tuyển dụng</b></a></li>								
+									<li><a href="donghocasio.html"><b>Đồng hồ Casio</b></a></li>
+								</ul>
+							</li>
+							<li><a>LIÊN HỆ</a>
+								<ul id="ds-danhmuc">
+									<li><a href="store.html"><b>Cửa hàng</b></a></li>
+									<li><a href="agent.html"><b>Đại lý</b></a></li>
+									<li><a href="service-center.html"><b>Trung tâm bảo hành</b></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!--Container-->
+			<div id="container">
+				<div id="container-thanhtoan">
+					<div id="duongdan">
+						<a href="index.html">Trang chủ </a>&nbsp <a>>></a> &nbsp <a href="cart.html"> Giỏ hàng</a> &nbsp <a>>></a> &nbsp <a href="thanhtoan.html"> Thanh toán</a>
+					</div>
+					
+					<!--content left-->
+					<div id="phuongthuc-thanhtoan">
+						<h3>THÔNG TIN GIAO HÀNG</h3>
+						<div class="chonphuongthuc-thanhtoan">
+							<h4>Chọn phương thức giao hàng</h4>
+							<input id="gh1" checked="gh1" type="radio" name="pt-giaohang" value="Giao hàng tiêu chuẩn"><label>Giao hàng tiêu chuẩn</label><br />
+							<input id="gh2" type="radio" name="pt-giaohang" value="Giao hàng tiết kiệm"><label>Giao hàng tiết kiệm</label><br />
+							<input id="gh3" type="radio" name="pt-giaohang" value="Giao hàng nhanh"><label>Giao hàng nhanh</label><br />
+							<input id="gh4" type="radio" name="pt-giaohang" value="Giao hàng siêu tốc"><label>Giao hàng siêu tốc</label>
+						</div>
+						<div class="chonphuongthuc-thanhtoan">
+							<h4>Chọn hình thức bảo quản</h4>
+							<input id="bq1" checked="bg1" type="radio" name="pt-baoquan" value="Thông thường"><label>Thông thường</label><br />
+							<input id="bq2" type="radio" name="pt-baoquan" value="Hàng dễ vỡ"><label>Hàng dễ vỡ</label><br />
+						</div>
+						<div class="chonphuongthuc-thanhtoan">
+							<h4>Chọn hình thức thanh toán</h4>
+							<input id="tt1" checked="tt1" type="radio" name="pt-thanhtoan"><label>Thẻ nội địa</label><br />
+							<input id="tt2" type="radio" name="pt-thanhtoan"><label>Visa / master cart</label><br />
+							<input id="tt3" type="radio" name="pt-thanhtoan"><label>Ví điện tử momo</label><br />
+							<input id="tt4" type="radio" name="pt-thanhtoan"><label>Thanh toán trực tiếp</label>
+						</div>
+						<div id="thanhtoan">
+							<input class="nutan" type="button" value="QUAY LẠI" onclick="window.location.href='cart.html'">
+							<input class="nutan" id="ThanhToan" type="button" value="THANH TOÁN" >
+						</div>
+					</div>
+					
+					<!--content right-->
+					<div id="thongtin-thanhtoan">
+						<div id="giaohangtoi-thanhtoan">
+							<h3>Giao hàng tới</h3>
+							<p><b id="hoten">Phạm Đức Hoàng </b> | <b id="sodienthoai"> 0906090112</b></p>
+							<p id="diachi">18 Nguyễn Lương Bằng | tp. Hải Dương | tỉnh Hải Dương<p>
+						</div>
+						<div id="thanhtien-thanhtoan">
+							<p>
+								Giá tiền: <span id="giabandau">0 đ</span>
+							</p>
+							<p>
+								Phí ship: <span id="giaship">0 đ</span>
+							</p>
+							<p>
+								Tổng cộng: <span id="giacuoi">0 đ</span>
+							</p>					
+						</div>	
+						
+						<div id="thaydoi-thongtin">
+							<p>
+								Tên người nhận<input class="o-thaydoi" id="hoten_thaydoi" type="text">
+							</p>
+							<p>
+								Địa chỉ giao<input class="o-thaydoi" id="diachi_thaydoi" type="text">
+							</p>
+							<p>
+								Số điện thoại<input class="o-thaydoi" id="sodienthoai_thaydoi" type="text">
+							</p>					
+							<input id="huythaydoi" class="nutthaydoi" type="button" value="HỦY THAY ĐỔI">
+							<input id="dongy-thaydoi" class="nutthaydoi" type="submit" value="ĐỒNG Ý THAY ĐỔI">
+						</div>
+					</div>
+					
+					<input id="thaydoi" class="nutan" type="button" value="THAY ĐỔI THÔNG TIN">
+				</div>
+				<!--Các dịch vụ-->
+				<div id="dichvu">
+					<div class="dv">
+						<img id="anh-dv" src="Anh/real.png" />
+						<a><b>Chính hãng Casio Nhật Bản</b></a><br />
+						<a>Casio Hoàng Phú ủy quyền Casio</a>
+					</div>
+					<div class="dv">
+						<img id="anh-dv" src="Anh/shipfree.png" />
+						<a><b>Giao hàng toàn quốc</b></a><br />
+						<a>Freeship với HĐ trên 1 triều đồng</a>
+					</div>
+					<div class="dv">
+						<img id="anh-dv" src="Anh/baohanh.png" />
+						<a><b>Bảo hành chính hãng</b></a><br />
+						<a>Bảo hành máy 5 năm G-Shock & Baby-G</a>
+					</div>
+				</div>
+			</div>
+			
+			<script src="Js/java_thanhtoan.js"></script>
+			<script>
+				auto();
+			</script>
+			<!--footer-->
+			<div id="footer">
+				<div id="info-website">
+				
+					<!--info 1-->
+					<div id="info1">
+						<span><b>CASIO HOÀNG PHÚ</b></span><br />
+						<a>Địa chỉ: Số 2/24/441, Phường Bình Hàng, Thành phố Hải Dương.</a><br /><br />
+						<a>Tư vấn mua hàng (8:00-17:00): 1900.111.222 (Phím 1) </a><br /><br />
+						<a>Chăm sóc khách hàng: 1900.111.222 (Phím 2) </a><br /><br />
+						<a>Gmail: donghohoangphu@gmail.com</a>
+					</div>
+					
+					<!--info 2-->
+					<div id="info2">
+						<span><b>THÔNG TIN</b></span><br />
+						<a href="gioithieu.html">Giới thiệu</a><br /><br />
+						<a href="#">Lịch sử hình thành </a><br /><br />
+						<a href="#">Tầm nhìn và sứ mệnh</a><br /><br />
+						<a href="#">Website Casio</a>
+					</div>
+					
+					<!--info 3-->
+					<div id="info2">
+						<span><b>HỖ TRỢ</b></span><br />
+						<a href="#">Hướng dẫn thanh toán</a><br /><br />
+						<a href="#">Hướng dẫn mua hàng online</a><br /><br />
+						<a href="#">Chính sách khách hàng thân thiết</a><br /><br />
+					</div>
+					
+					<!--info 4-->
+					<div id="info2">
+						<span><b>CHÍNH SÁCH</b></span><br />
+						<a href="#">Điều khoản dịch vụ</a><br /><br />
+						<a href="#">Quy định đổi trả</a><br /><br />
+						<a href="#">Quy định bảo hành</a><br /><br />
+						<a href="#">Trung tâm bảo hành</a><br /><br />
+						<a href="#">Chính sách bảo mật</a>
+					</div>
+					
+					<img id="anh-logo-casio" src="Anh/logo-casio.png"/>
+					<img id="anh-pay" src="Anh/payment.png"/>
+				</div>
+			</div>
+			
+			<div id="banquyen">
+				<div id="copyright">
+					<a href="index.html"><img id="logo-banquyen" src="Anh/logo.png" /></a>
+					<a>@Bản quyền thuộc về CASIO Hoàng Phú - Developed by ĐạtNT.</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

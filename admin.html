@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<title>Trang quản trị</title>
+		<link rel="stylesheet" type="text/css" href="css/style_admin.css" />
+		<link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+		<meta charset="UTF-8">
+		<script src="Js/jquery-3.6.0.min.js"></script>
+		<script src="http://vnxf.vn/js/snow.js"></script>
+	</head>
+	<body>
+		<!--header-->
+		<div id="header">
+			<div id="header-top">
+				<span>QUẢN TRỊ WEBSITE</span>
+				<img src="Anh/logoCH.png"/>
+				<a href="index.html">Đăng xuất</a>
+			</div>
+			
+			<div id="nav">
+				<ul>
+					<button id="click1" checked="">
+						<li><a>Trang chủ</a></li>
+					</button>
+					<button id="click2">	
+						<li><a>Sản phẩm</a></li>
+					</button>	
+					<button id="click3">	
+						<li><a>Danh sách</a></li>
+					</button>
+					<button id="click4">	
+						<li><a>Khách hàng</a></li>
+					</button>	
+					<button id="click5">	
+						<li><a>Bình luận</a></li>
+					</button>	
+					<button id="click6">	
+						<li><a>Tài khoản</a></li>
+					</button>	
+				</ul>
+				
+			</div>
+		</div>
+			
+		<!--Container-->
+		<div id="container">
+			<div id="content-home"> <!------- Nội dung trang chủ ------------->
+				<h1>Chào mừng <a>bạn</a> đã quay trở lại !!! Hãy thiết lập trang quản trị của bạn</h1>
+			</div>
+			
+			<div id="content-product"> <!------- Nội dung sản phẩm ------------->
+				<div class="title"> 
+					<a>THÊM MỚI SẢN PHẨM</a>
+				</div>
+				<div id="main2">
+					<form action="" method="post"> <!--method: Phương thức để tải dữ liệu lên.-->
+						<div class="content1">
+							Mã sản phẩm: <br />
+							<input type="text" name="product-id" id="text-id" /> 
+						</div>
+						<div class="content1">
+							<br /> Tên sản phẩm: <br />
+							<input type="text" name="product-name" id="text-name"/> 
+						</div>
+						<br />
+						<div class="content1">
+							<input type="button" value="Thêm mới" id="add-new"/> &nbsp 
+							<input type="reset" value="Nhập lại"/> &nbsp
+							<input id="list" type="button" value="Danh sách"/>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<div id="content-list"> <!------- Nội dung danh sách ------------->
+				<div class="title"> 
+					<a>QUẢN LÝ SẢN PHẨM</a>
+				</div>
+				<div id="main3">
+					<div class="content1" id="list-product">
+						<!-- <table>
+							<tr>
+								<th> </th>
+								<th>Mã loại</th>
+								<th>Tên loại</th>
+								<th>Công cụ</th>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name=""/></td>
+								<td>SP001</td>
+								<td>Đồng hồ G-Shock001</td>
+								<td><input type="button" value="Sửa"/> &nbsp <input type="button" value="Xóa"/></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name=""/></td>
+								<td>SP002</td>
+								<td>Đồng hồ Baby-G002</td>
+								<td><input type="button" value="Sửa"/> &nbsp <input type="button" value="Xóa"/></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name=""/></td>
+								<td>SP003</td>
+								<td>Đồng hồ Ediffice003</td>
+								<td><input type="button" value="Sửa"/> &nbsp <input type="button" value="Xóa"/></td>
+							</tr>
+						</table> -->
+					</div>
+					<br />
+					<div class="content1">
+						<input type="button" id="select-all" value="Chọn tất cả"/> &nbsp 
+						<input type="button" id = "remove-select-all" value="Bỏ chọn tất cả"/> &nbsp
+						<input type="button"  id="delete-all" value="Xóa các mục đã chọn"/> &nbsp
+						<input id="enter-more" type="button" value="Nhập thêm"/>
+					</div>
+				</div>
+			</div> 
+			
+			<div id="content-customer"> <!------- Nội dung khách hàng ------------->
+				<h1>Chưa có khách hàng nào!</h1>
+			</div>
+			
+			<div id="content-comment"> <!------- Nội dung bình luận ------------->
+				<h1>Chưa có bình luận nào!</h1>
+			</div>
+			
+			<div id="content-account"> <!------- Nội dung tài khoản  ------------->
+				<div id="option-account">
+					<span><b>TÙY CHỌN TÀI KHOẢN</b></span>  <br /> <br /> 
+					<a>Thông tin đơn hàng</a> <br /> <br />
+					<a>Doanh thu trong tháng</a> <br /> <br />
+					<a>Thiết lập tài khoản</a> <br /> <br />
+					<a>Đổi mật khẩu</a> <br /> <br />
+					<a href="login.html">Thoát</a> <br /> <br />
+				</div>
+			</div>
+		</div>
+		
+		<script src="Js/admin.js">	</script>	
+		<script>
+			getName();
+		</script>
+	</body>
+</html>

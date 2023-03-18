@@ -1,0 +1,194 @@
+$(document).ready(function(){
+	var cart = sessionStorage.getItem("cart");
+	var order = "["+cart+"]";
+	var data = JSON.parse(order);
+	$("#soluong").text(data.length);
+	var content = "";
+				
+	content+= `
+		<table id="danhsach">
+		<tr>
+			<th>STT</th>
+			<th>Ảnh sản phẩm</th>
+			<th>Tên sản phẩm</th>
+			<th>Đơn giá</th>
+			<th>Số lượng</th>
+			<th>Thành tiền</th>
+			<th>Xóa</th>
+		</tr>`;
+	for(var i=0;i<data.length;i++){
+		var cartItem = `
+			<tr class="cotnay"> 
+				<td>${i+1}</td>
+				<td><img class="cart-item-img" src="${data[i].anh}"/></td>
+				<td>${data[i].ten}</td>
+				<td class="price-item">${data[i].gia}</td>
+				<td>							
+					<input id="txtsoluong" min="1" type="number" value="1">
+				</td>
+				
+				
+				
+
+
+
+				<td class="allprice"><span>${data[i].gia}</span></td>
+				<td><img class="thungrac" src="Anh/thungrac.png" /></td>
+			</tr>
+				`;	
+				
+		content += cartItem;
+	}
+		content += `</table>`;
+				
+	$("#content-cart").html(content);
+});
+
+//Hướng dẫn
+$(document).ready(function(){		
+	$("#huongdan").click(function(){					
+		$(this).next().slideToggle();					
+	});				
+});
+
+//Xóa giỏ hàng
+document.getElementById("capnhatlai").onclick = function insRow()
+{
+	var bang = document.getElementById('danhsach');
+	var soluonghang = (bang.getElementsByTagName('tr')).length;
+ 
+	for (var i = soluonghang - 1; i > 0; i--) {
+		document.getElementById('danhsach').deleteRow(i);
+	}
+	sessionStorage.clear();
+	document.getElementById('soluong').text = "0";
+	alert("Xóa hết giỏ hàng thành công");
+	
+	location.reload();
+}
+
+//Xóa 1 hàng
+$(document).on("click",".thungrac",function(){
+	$(this).parent().parent().remove();
+});
+	
+//xóa phẩy trong chuỗi đơn giá
+function getMoney(chuoi){
+	var money = chuoi.replace(" đ","");
+	money = money.replaceAll(",","");
+	return money			
+}
+//thêm dấu phẩy trong chuỗi thành tiền
+function ThanhTien(tien) {
+  tien = tien.toString();
+
+  var mang = tien.split('');
+  mang = mang.reverse();
+  var ketqua = [0];
+  var dem = mang.length;
+
+  if (dem > 3) {
+    for (var i = 1; i < dem; i++) {
+      if (i % 3 == 0) {
+        ketqua += ','
+      }
+      ketqua += mang[i]
+    }
+    ketqua = ketqua.split('').reverse().join('');
+  }
+  else {
+    ketqua += mang.join('');
+  }
+  return (ketqua)
+}
+
+//tổng tiền
+function tonghoadon() {
+	var cart = sessionStorage.getItem("cart");
+	var order = "["+cart+"]";
+	var data = JSON.parse(order);
+	var tong = 0;
+	
+	for(var i=0;i<data.length;i++){
+		var laytien = getMoney(data[i].gia);
+		
+		tong = Number(tong) + Number(laytien);
+	}
+	
+	$("#tonggiatien").text(ThanhTien(tong) + " đ");
+	
+	$("#tong").text(ThanhTien(tong + 100000) + " đ");
+}
+
+//cap nhat gio hang
+function capnhatgiohang(){
+	var n = document.querySelectorAll(".cotnay");	
+	var tong = 0;
+	
+	for(var i=0; i<n.length; i++){
+		var soluong = n[i].querySelector("#txtsoluong").value;
+		var giatien = n[i].querySelector(".price-item").innerHTML;
+		
+		var thanhtien = Number(soluong) * getMoney(giatien);
+		
+		n[i].querySelector(".allprice span").innerHTML = ThanhTien(thanhtien) + " đ";
+		
+		tong = tong + thanhtien;
+	}	
+	$("#tonggiatien").text(ThanhTien(tong) + " đ");
+	$("#tong").text(ThanhTien(tong + 100000) + " đ");
+}
+
+//lưu tổng
+function luutong(){	
+	if(confirm("Bấm ok để đồng ý đặt hàng") == true){	
+		var giabd = document.querySelector("#tonggiatien").innerHTML;
+	
+		sessionStorage.removeItem("giabandau");		
+		sessionStorage.setItem("giabandau",getMoney(giabd));
+		
+		window.location.href='thanhtoan.html'
+	}
+}
+
+
+
+/*$(".plus").click(function(){
+	var soluong = $(this).prev().attr("value");
+	var a = Number(soluong)+1;
+	$(this).prev().attr("value",a);
+				
+	var str_price = $(this).parent().prev().text();	
+
+	var price = getMoney(str_price);
+	price = a * Number(price);
+
+	$(this).parent().next().text(price);
+					
+	var thanhtien = $(this).parent().next().text();
+	var ketqua = ThanhTien(thanhtien);
+					
+	$(this).parent().next().text(ketqua + " đ");
+					
+	var str_price1 = $(this).parent().next().text();	
+});
+			
+$(".sub").click(function(){
+	var soluong = $(this).next().attr("value");
+	if(Number(soluong)>1)
+	{
+	var a = Number(soluong)-1;
+	$(this).next().attr("value",a);	
+						
+	var str_price = $(this).parent().prev().text();		
+	var price = getMoney(str_price);
+	price = a * Number(price);
+				
+	$(this).parent().next().text(price);
+						
+	var thanhtien = $(this).parent().next().text();
+	var ketqua = ThanhTien(thanhtien);
+					
+	$(this).parent().next().text(ketqua + " đ");					
+					}
+});*/

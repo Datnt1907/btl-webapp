@@ -1,0 +1,167 @@
+<html>
+	<head>
+		<title>Hoàng Phú | Đồng Hồ Đeo Tay</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_gioithieu.css" />
+		<link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+		<meta charset="UTF-8">
+		<script src="Js/jquery-3.6.0.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				var cart = sessionStorage.getItem("cart");
+				var order = "["+cart+"]";
+				var data = JSON.parse(order);
+				$("#soluong").text(data.length);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="frame">
+		
+			<!--header-->
+			<div id="header">
+				<div id="head-top">
+					<div id="login-signup">
+						<a href="signup.html">Đăng ký</a><b>/</b><a href="login.html">Đăng nhập</a>
+					</div>
+				</div>
+				<div id="head">
+				
+						<a href="index.html"><img id="anh-logo" src="Anh/logo.png" /></a>
+						<img id="anh-logoNCC" src="Anh/logoNCC.png" />
+						
+						<div id="kinhlup">
+							<img id="anh-kinhlup" src="Anh/kinhlup.jpg"/>
+						</div>
+						
+						<input id="thanhtimkiem" type="text" placeholder="Tìm kiếm sản phẩm" />
+						<input id="nuttimkiem" type="button" value="Tìm kiếm" />
+						
+						<div id="contact">
+							<img id ="anh-tainghe" src="Anh/tainghe.png" />
+							<a href="tel:1900111222">Liên hệ</a>
+							<a href="tel:1900111222">1900.111.222</a>
+						</div>
+						
+						<div id="cart">
+							<a href="cart.html"><img id="anh-giohang" src="Anh/cart.png" /></a>
+							<a class="info-cart" id= "giohang"  href="cart.html">Giỏ hàng</a>
+							<a id="soluong" class="info-cart">0</a>
+						</div>
+				</div>
+				
+				<!--menu 2 cấp-->
+				<div id="menu">
+					<div id="nav">
+						<ul>
+							<li><a id ="danhmucsp">DANH MỤC SẢN PHẨM</a>
+								<ul id="ds-danhmuc">
+									<li><a href="brandG-Shock.html"><b>G-Shock</b></a></li>
+									<li><a href="brandBaby-G.html"><b>Baby-G</b></a></li>
+									<li><a href="brandEdifice.html"><b>Edifice</b></a></li>
+									<li><a href="brandSheen.html"><b>Sheen</b></a></li>
+									<li><a href="brandGeneral.html"><b>General</b></a></li>
+									<li><a href="limited.html"><b>Limited</b></a></li>
+								</ul>
+							</li>
+							<li><a href="index.html">TRANG CHỦ</a></li>
+							<li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+							<li><a href="limited.html">LIMITED</a></li>
+							<li><a href="khuyenmai.html">KHUYẾN MÃI</a></li>
+							<li><a href="tintuc.html">TIN TỨC</a>
+								<ul id="ds-danhmuc">
+									<li><a href="tintuc.html"><b>Tin tức</b></a></li>
+									<li><a href="tinkhuyenmai.html"><b>Tin khuyến mãi</b></a></li>
+									<li><a href="tuyendung.html"><b>Tuyển dụng</b></a></li>								
+									<li><a href="donghocasio.html"><b>Đồng hồ Casio</b></a></li>
+								</ul>
+							</li>
+							<li><a>LIÊN HỆ</a>
+								<ul id="ds-danhmuc">
+									<li><a href="store.html"><b>Cửa hàng</b></a></li>
+									<li><a href="agent.html"><b>Đại lý</b></a></li>
+									<li><a href="service-center.html"><b>Trung tâm bảo hành</b></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!--Container-->
+			<div id="container">
+				<div id="move">	
+					<a id="icon-home" href="index.html"><i class="fas fa-home"></i></a> <a class="text" href="index.html">Trang chủ</a>  <a id="icon-move"><i class="fas fa-angle-right"></i></a><a class="text" href="gioithieu.html">Giới thiệu</a>					
+				</div>
+				
+				<div id="title">
+					<a>Giới thiệu</a>
+				</div>
+				
+				<div id="text-content">
+					<p>Công ty <b>CỔ PHẦN HOÀNG PHÚ WATCH TIỀN THÂN CÔNG TY CỔ PHẦN HOÀNG PHÚ HẢI DƯƠNG</b> tự hào là nhà phân phối chính thức và duy nhất sản phẩm đồng hồ CASIO - NHẬT BẢN của công ty CASIO COMPUTER CO., LTD Tokyo, Japan tại thị trường Việt Nam.</p>
+					<img src="Anh/service-center.png"/>	<br /> 
+					<p>&nbsp &nbsp &nbsp &nbsp Thương hiệu <b>CASIO</b> đã có mặt trên thị trường thế giới hơn 50 năm với nhiều sản phẩm điện tử nổi tiếng và điều đó đã là một sự bảo chứng về chất lượng sản phẩm mà chúng tôi đang cung cấp.</p> <br />
+					<p>&nbsp &nbsp &nbsp &nbsp Trong vai trò nhà phân phối chính thức và duy nhất một sản phẩm danh tiếng tại thị trường Việt Nam, công ty Công ty Cổ Phần Anh Khuê Watch luôn cố gắng đưa sản phầm đến tay người tiêu dùng ở mức giá cạnh tranh và hợp lý nhất, ngoài những chương trình khuyến mãi hấp dẫn mang đến nhiều quyền lợi cho Khách Hàng. Công ty Cổ Phần Anh Khuê Watch đặc biệt chú trọng và mang đến chế độ bảo hành chính hãng và chuyên nghiệp.</p>
+					<p>&nbsp &nbsp &nbsp &nbsp  Với hơn 80 cửa hàng và 300 đại lý trải dài khắp các tỉnh thành trong cả nước, Công ty Cổ Phần Anh Khuê Watch mong muốn được phục vụ rộng rãi cho tất cả Khách hàng. Anh Khuê Watch là nhà phân phối ủy quyền đồng hồ CASIO tại thị trường Việt Nam, Chúng tôi luôn đảm bảo tất cả những sản phẩm mà chúng tôi kinh doanh là <b>sản phẩm chính hãng</b> và được <b>bảo hành chính hãng.</b></p> <br />
+					<p>&nbsp &nbsp &nbsp &nbsp Bên cạnh hoạt động bán lẻ, chúng tôi còn bán số lượng lớn cho các công ty để làm chương trình khuyến mãi hoặc làm quà tặng với chính sách chiết khấu đặc biệt. Chúng tôi còn có thể in logo công ty quý khách lên mặt đồng hồ và đây là một phương thức quảng cáo hữu hiệu nhất cho thương hiệu của quý khách trên đồng hồ Casio.</p>
+					<p>&nbsp &nbsp &nbsp &nbsp Với những tiêu chí trên, Cty chúng tôi tin rằng sản phẩm mà chúng tôi cung cấp sẽ luôn mang đến vẻ đẹp, sự tiện ích và làm hài lòng quý khách hàng thân thiết trên thị trường Việt Nam.</p>
+				</div>
+				
+			</div>
+						
+			<!--footer-->
+			<div id="footer">
+				<div id="info-website">
+				
+					<!--info 1-->
+					<div id="info1">
+						<span><b>CASIO HOÀNG PHÚ</b></span><br />
+						<a>Địa chỉ: Số 2/24/441, Phường Bình Hàn, Thành phố Hải Dương.</a><br /><br />
+						<a>Tư vấn mua hàng (8:00-17:00): 1900.111.222 (Phím 1) </a><br /><br />
+						<a>Chăm sóc khách hàng: 1900.111.222 (Phím 2) </a><br /><br />
+						<a>Gmail: donghohoangphu@gmail.com</a>
+					</div>
+					
+					<!--info 2-->
+					<div id="info2">
+						<span><b>THÔNG TIN</b></span><br />
+						<a href="gioithieu.html">Giới thiệu</a><br /><br />
+						<a href="#">Lịch sử hình thành </a><br /><br />
+						<a href="#">Tầm nhìn và sứ mệnh</a><br /><br />
+						<a href="#">Website Casio</a>
+					</div>
+					
+					<!--info 3-->
+					<div id="info2">
+						<span><b>HỖ TRỢ</b></span><br />
+						<a href="#">Hướng dẫn thanh toán</a><br /><br />
+						<a href="#">Hướng dẫn mua hàng online</a><br /><br />
+						<a href="#">Chính sách khách hàng thân thiết</a><br /><br />
+					</div>
+					
+					<!--info 4-->
+					<div id="info2">
+						<span><b>CHÍNH SÁCH</b></span><br />
+						<a href="#">Điều khoản dịch vụ</a><br /><br />
+						<a href="#">Quy định đổi trả</a><br /><br />
+						<a href="#">Quy định bảo hành</a><br /><br />
+						<a href="#">Trung tâm bảo hành</a><br /><br />
+						<a href="#">Chính sách bảo mật</a>
+					</div>
+					
+					<img id="anh-logo-casio" src="Anh/logo-casio.png"/>
+					<img id="anh-pay" src="Anh/payment.png"/>
+				</div>
+			</div>
+			
+			<div id="banquyen">
+				<div id="copyright">
+					<a href="index.html"><img id="logo-banquyen" src="Anh/logo.png" /></a>
+					<a>@Bản quyền thuộc về CASIO Hoàng Phú - Developed by ĐạtNT.</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

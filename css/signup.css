@@ -1,0 +1,194 @@
+#container {
+	width: 1511px;
+	height: 780px;
+	margin: 0px auto;
+	background-image: url('bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: justify;
+	position: relative;
+}
+
+#left {
+	width: 50%;
+	height: 780px;
+	float: left;
+	background-color: #252525CC;
+}
+#content-left {
+	width: 480px;
+	height: 550px;
+	margin: 0px auto;
+	color: #FFFFFF;	
+}
+#text1 {
+	color: #FFFFFF;
+	font-size: 34px;
+}
+#text2 {
+	font-size: 40px;
+	text-transform: uppercase; /* viết hoa */
+	color: #EC1C24;
+}
+#info-login {
+	width: 100%;
+	height: 60px;
+	font-size: 24px;
+	margin-top: 20px;
+	text-align: 10px;
+	padding-left: 10px;
+	border-left: 2px solid #EC1C24;
+}
+#login {
+	width: 480px;
+	height: 120px;
+	margin: 0px auto;
+	margin-top: 70px;
+}
+#question {
+	font-size: 24px;
+	color: #FFFFFF;
+}
+#login-now{
+	width: 100%;
+	height: 70px;
+	color: #FFFFFF;
+	margin-top: 16px;
+}
+#text-login{
+	color: #FFFFFF;
+	font-size: 24px;
+	line-height: 70px;
+	text-decoration: none;
+	padding-left: 140px;
+	display: block;
+	border-radius: 14px;
+	background-color: #555555;	
+}
+#text-login:hover{
+	background-color: #EC1C24;
+}
+#back {
+	width: 80px;
+	height: 100px;
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+}
+#icon-back {
+	width: 100%;
+	height: 100%;
+}
+#right {
+	width: 50%;
+	height: 780px;
+	float: left;
+}
+#content-right {
+	width: 480px;
+	height: 710px;
+	margin: 0px auto;
+	margin-top: 4px;
+	background-color: #FFF;	
+	border-radius: 14px;
+}
+#logo{
+	width: 480px;
+	height: 120px;
+	border-radius: 14px;
+	background-color: #EEE;
+}
+#logo-HP {
+	width: 300px;
+	height: 100%;
+	margin-left: 100px;
+	margin-top: -3px;
+}
+.special-content {
+	width: 450px;
+	height: 70px;
+	margin: 0px auto;
+	margin-top: 40px;
+	position: relative;
+}
+#warning {
+	width: 450px;
+	height: 10px;
+	margin: 0px auto;
+	margin-top: 10px;
+	line-height: 10px;
+}
+.frame-left {
+	width: 220px;
+	height: 70px;
+	border-radius: 14px;
+}
+.frame-right {
+	width: 220px;
+	height: 70px;
+	border-radius: 14px;
+	position: absolute;
+	top: 0px;
+	left: 230px;
+}
+.text-sc {
+	width: 220px;
+	height: 70px;
+	border-radius: 14px;
+	font-size: 20px;
+	padding-left: 20px;
+}
+#s-c2 {
+	margin-top: 20px;
+}
+.content {
+	width: 450px;
+	height: 70px;
+	margin: 0px auto;
+	margin-top: 20px;
+}
+.text-content {
+	width: 100%;
+	height: 100%;
+	border-radius: 14px;
+	font-size: 20px;
+	padding-left: 20px;
+}
+/*ĐĂNG KÝ TÀI KHOẢN*/
+#signup{
+	width: 450px;
+	height: 70px;
+	margin: 20px 0px 0px 14px;
+	line-height: 70px;
+	border-radius: 14px;
+	text-decoration: none;
+	font-size: 24px;
+	color: #FFFFFF;
+	cursor: pointer;
+	background-color: #EC1C24;
+}
+#signup i{
+	font-size: 24px;
+	color: #FFFFFF;
+	float: left;
+	margin: 21px -90px 0px 100px;
+}
+#signup a{
+	font-size: 20px;
+	font-weight: bold;
+}
+#forget-pw {
+	width: 200px;
+	height: 40px;
+	margin: 0px auto;
+	margin-top: 24px;
+	
+}
+#text-fpw {
+	color: #313131;
+	font-size: 22px;
+	padding-left: 24px;
+}
+#text-fpw:hover {
+	color: #EC1C24;
+}

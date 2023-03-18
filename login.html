@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Đăng nhập</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+		<meta charset="UTF-8">
+		<script src="Js/jquery-3.6.0.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="left">
+				<div id="content-left">
+					<h2 id="text1">Chào mừng bạn đến với</h2>
+					<h1 id="text2">Đồng hồ Hoàng Phú</h1>
+					<div id="info-login">
+						<a>Đăng ký hoặc đăng nhập tài khoản để nhận nhiều ưu đãi hơn!</a>
+					</div>
+				</div>
+				<div id="signup">
+					<a id="Question"><b>Bạn chưa có tài khoản?</b></a> 
+					<div id="signup-now">
+						<a id="text-signup" href="signup.html"><b>ĐĂNG KÝ NGAY!</b></a>
+					</div>					
+				</div>
+				<div id="back">
+					<a href="index.html"><img id="icon-back" src="Anh_Login_Signup/back.png"/></a>
+				</div>
+			</div> 
+			
+			<div id="right">
+				<div id="content-right">
+					<div id="logo">
+						<a href="index.html"><img id ="logo-HP" src="Anh_Login_Signup/logo.png" alt="Ảnh"/></a>
+					</div>
+					
+					<form action="" name="form" id="form-login"> <!-- tạo form nhập dữ liệu trên trang web -> gửi dữ liệu lên server, chứa các đối tượng điều khiển-->
+						<div class="content" >
+							<input class="text-content" type="text" id ="A" name="tk" placeholder="Tài khoản" />
+						</div>
+						
+						<div id="warning">
+							<a id="warning1"><i>Tài khoản không được để trống!</i></a>
+						</div>
+						
+						<div class="content" id="c-1">
+							<input class="text-content" type="password" id ="P" name="mk" placeholder="Mật khẩu" />
+						</div>
+						
+						<div id="warning">
+							<a id="warning2"><i>Mật khẩu không được để trống!</i></a>
+						</div>
+						
+						<button id="login" type="submit" onclick="">
+							<i class="fa fa-fw fa-sign-in-alt mr-1"></i>
+							<a>ĐĂNG NHẬP</a> 
+						</button>
+					</form> 
+					
+				</div>
+			</div>
+			
+			<script src="Js/java_Login.js"></script>
+			
+			
+		</div>
+	</body>
+</html>

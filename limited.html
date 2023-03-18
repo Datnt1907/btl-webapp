@@ -1,0 +1,354 @@
+<html>
+	<head>
+		<title>Hoàng Phú | Limited</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_limited.css" />
+		<meta charset="UTF-8">
+		
+		<script src="Js/jquery-3.6.0.min.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				var cart = sessionStorage.getItem("cart");
+				var order = "["+cart+"]";
+				var data = JSON.parse(order);
+				$("#soluong").text(data.length);
+					
+				var content = "";
+				
+				$(".btn-muangay").click(function(){
+					var soluong = Number(sessionStorage.getItem("soluong"));
+					if (soluong!=null)
+						soluong +=1;
+					else
+						soluong = 1;
+						
+					$("#soluong").text(soluong);
+					sessionStorage.setItem("soluong",soluong);
+
+					var Img = $(this).parent().find(".anh-sp-limited").attr("src");
+					var Name = $(this).parent().find(".sp-name-limited").text();
+					var Price = $(this).parent().find(".sp-new-price-limited").text();
+
+					var sanpham = {
+						"anh":Img,
+						"ten":Name,
+						"gia":Price,
+					};
+					
+					var cart = sessionStorage.getItem("cart");
+					var ds_sanpham = "";
+				
+					if(cart!=null){
+						ds_sanpham = cart +","+JSON.stringify(sanpham);
+					}
+					else{
+						ds_sanpham = JSON.stringify(sanpham);
+					}
+					sessionStorage.setItem("cart", ds_sanpham);	
+					alert("Sản phẩm đã dược thêm vào giỏ hàng");
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<div id="frame">
+		
+			<!--header-->
+			<div id="header">
+				<div id="head-top">
+					<div id="login-signup">
+						<a href="signup.html">Đăng ký</a><b>/</b><a href="login.html">Đăng nhập</a>
+					</div>
+				</div>
+				<div id="head">
+				
+						<a href="index.html"><img id="anh-logo" src="Anh/logo.png" /></a>
+						<img id="anh-logoNCC" src="Anh/logoNCC.png" />
+						
+						<div id="kinhlup">
+							<img id="anh-kinhlup" src="Anh/kinhlup.jpg"/>
+						</div>
+						
+						<input id="thanhtimkiem" type="text" placeholder="Tìm kiếm sản phẩm" />
+						<input id="nuttimkiem" type="button" value="Tìm kiếm" />
+						
+						<div id="contact">
+							<img id ="anh-tainghe" src="Anh/tainghe.png" />
+							<a href="tel:1900111222">Liên hệ</a>
+							<a href="tel:1900111222">1900.111.222</a>
+						</div>
+						
+						<div id="cart">
+							<a href="cart.html"><img id="anh-giohang" src="Anh/cart.png" /></a>
+							<a class="info-cart" id= "giohang"  href="cart.html">Giỏ hàng</a>
+							<a id="soluong" class="info-cart">0</a>
+						</div>
+				</div>
+				
+				<!--menu 2 cấp-->
+				<div id="menu">
+					<div id="nav">
+						<ul>
+							<li><a id ="danhmucsp">DANH MỤC SẢN PHẨM</a>
+								<ul id="ds-danhmuc">
+									<li><a href="brandG-Shock.html"><b>G-Shock</b></a></li>
+									<li><a href="brandBaby-G.html"><b>Baby-G</b></a></li>
+									<li><a href="brandEdifice.html"><b>Edifice</b></a></li>
+									<li><a href="brandSheen.html"><b>Sheen</b></a></li>
+									<li><a href="brandGeneral.html"><b>General</b></a></li>
+									<li><a href="limited.html"><b>Limited</b></a></li>
+								</ul>
+							</li>
+							<li><a href="index.html">TRANG CHỦ</a></li>
+							<li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+							<li><a href="limited.html">LIMITED</a></li>
+							<li><a href="khuyenmai.html">KHUYẾN MÃI</a></li>
+							<li><a href="tintuc.html">TIN TỨC</a>
+								<ul id="ds-danhmuc">
+									<li><a href="tintuc.html"><b>Tin tức</b></a></li>
+									<li><a href="tinkhuyenmai.html"><b>Tin khuyến mãi</b></a></li>
+									<li><a href="tuyendung.html"><b>Tuyển dụng</b></a></li>								
+									<li><a href="donghocasio.html"><b>Đồng hồ Casio</b></a></li>
+								</ul>
+							</li>
+							<li><a>LIÊN HỆ</a>
+								<ul id="ds-danhmuc">
+									<li><a href="store.html"><b>Cửa hàng</b></a></li>
+									<li><a href="agent.html"><b>Đại lý</b></a></li>
+									<li><a href="service-center.html"><b>Trung tâm bảo hành</b></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!--Container-->
+			<div id="container">
+				<div id="container-limited">
+					<div id="duongdan">
+						<a href="index.html">Trang chủ </a>&nbsp <a>>></a> &nbsp <a href="limited.html"> Limited</a>
+					</div>
+					<div id="container-limited-left">
+						<div id="danhmucsp-limited">
+							<div id="danhmuc-title-limited">
+								<a><b>Chọn mức giá</b></a>
+							</div>
+							<input class="dm" type="checkbox" id="chonduoi1trieu" name="dm1"><label>Dưới 1 triệu </label> <br />
+							<input class="dm" type="checkbox" id="chontu1-5trieu" name="dm1"><label>Từ 1 - 5 triệu </label> <br />
+							<input class="dm" type="checkbox" id="chontu5-10trieu" name="dm1"><label>Từ 5 - 10 triệu </label> <br />
+							<input class="dm" type="checkbox" id="chontren10trieu" name="dm1"><label>Trên 10 triệu </label> <br />
+						</div>
+						
+						<!--<div id="danhmucsp-limited">
+							<div id="danhmuc-title-limited">
+								<a><b>Chọn loại dây</b></a>
+							</div>
+							<input class="dm" type="checkbox"><label>Dây da </label> <br />
+							<input class="dm" type="checkbox"><label>Dây kim loại </label> <br />
+							<input class="dm" type="checkbox"><label>Dây nhựa </label> <br />
+							<input class="dm" type="checkbox"><label>Dây vải </label> <br />
+							<input class="dm" type="checkbox"><label>Dây carbon </label> <br />
+							<input class="dm" type="checkbox"><label>Dây titan </label> <br />
+							<input class="dm" type="checkbox"><label>Dây tổng hợp </label> <br />
+						</div>
+						
+						<div id="danhmucsp-limited">
+							<div id="danhmuc-title-limited">
+								<a><b>Chọn màu sắc</b></a>
+							</div>
+							<input class="dm" type="checkbox"><label>Xanh nước biển </label> <br />
+							<input class="dm" type="checkbox"><label>Bạc </label> <br />
+							<input class="dm" type="checkbox"><label>Gold </label> <br />
+							<input class="dm" type="checkbox"><label>Đen </label> <br />
+							<input class="dm" type="checkbox"><label>Nâu </label> <br />
+							<input class="dm" type="checkbox"><label>Hồng </label> <br />
+							<input class="dm" type="checkbox"><label>Xanh lá </label> <br />
+						</div>-->
+					</div>
+					
+					<div id="container-limited-right">
+					
+						<div id="sanpham-limited">
+							<div id="sp-title-limited">
+								<a><b>Đồng hồ phiên bản giới hạn</b></a>
+							</div>		
+							
+							<div class="sp-item-limited tu5-10trieu">
+								<a href="ChitietSP_GW-B5600HR-1.html"><img class="anh-sp-limited" src="Anh/GW-B5600HR-1.png" /></a>
+								<div class="trangthai-sp-new-limited">
+									<a>Limited</a>
+								</div>
+								<div class="sp-info-limited">
+									<a href="ChitietSP_GW-B5600HR-1.html" class="sp-name-limited">GW-B5600HR-1</a><br />
+									<a class="sp-new-price-limited"><b>5,990,800 đ</b></a>
+									<a class="sp-old-price-limited"><s>7,048,000 đ</s></a>
+								</div>
+								<input class="btn-muangay" type="button" value="MUA NGAY"></input>
+							</div>
+							
+							<div class="sp-item-limited tu1-5trieu">
+								<a href="#"><img class="anh-sp-limited" src="Anh/GA-140-1A4.png" /></a>
+								<div class="trangthai-sp-new-limited">
+									<a>Limited</a>
+								</div>
+								<div class="sp-info-limited">
+									<a href="#" class="sp-name-limited">GA-140-1A4</a><br />
+									<a class="sp-new-price-limited"><b>3,348,150 đ</b></a>
+									<a class="sp-old-price-limited"><s>3,939,000 đ</s></a>
+								</div>
+								<input class="btn-muangay" type="button" value="MUA NGAY"></input>
+							</div>
+							
+							<div class="sp-item-limited tu1-5trieu">
+								<a href="#"><img class="anh-sp-limited" src="Anh/GA-100CF-1A.png" /></a>
+								<div class="trangthai-sp-new-limited">
+									<a>Limited</a>
+								</div>
+								<div class="sp-info-limited">
+									<a href="#" class="sp-name-limited">GA-100CF-1A</a><br />
+									<a class="sp-new-price-limited"><b>3,523,250 đ</b></a>
+									<a class="sp-old-price-limited"><s>4,145,000 đ</s></a>
+								</div>
+								<input class="btn-muangay" type="button" value="MUA NGAY"></input>
+							</div>
+							
+							<div class="sp-item-limited duoi1trieu">
+								<a href="#"><img class="anh-sp-limited" src="Anh/GA-100CB-1A.png" /></a>
+								<div class="trangthai-sp-new-limited">
+									<a>Limited</a>
+								</div>
+								<div class="sp-info-limited">
+									<a href="#" class="sp-name-limited">GA-100CB-1A</a><br />
+									<a class="sp-new-price-limited"><b>900,567 đ</b></a><br/>
+									<a class="sp-old-price-limited"><s>4,145,000 đ</s></a>
+								</div>
+								<input class="btn-muangay" type="button" value="MUA NGAY"></input>
+							</div>
+							
+							<div class="sp-item-limited tu5-10trieu">
+								<a href="#"><img class="anh-sp-limited" src="Anh/GM-6900G-9DR.png" /></a>
+								<div class="trangthai-sp-new-limited">
+									<a>Limited</a>
+								</div>
+								<div class="sp-info-limited">
+									<a href="#" class="sp-name-limited">GM-6900G-9DR</a><br />
+									<a class="sp-new-price-limited"><b>6,250,050 đ</b></a>
+									<a class="sp-old-price-limited"><s>7,353,000 đ</s></a>
+								</div>
+								<input class="btn-muangay" type="button" value="MUA NGAY"></input>
+							</div>
+					
+							<div class="sp-item-limited tu1-5trieu">
+								<a href="#"><img class="anh-sp-limited" src="Anh/MTP-B105RL-1AV.png" /></a>
+								<div class="trangthai-sp-new-limited">
+									<a>Limited</a>
+								</div>
+								<div class="sp-info-limited">
+									<a href="#" class="sp-name-limited">MTP-B105RL-1AV</a><br />
+									<a class="sp-new-price-limited"><b>2,244,850 đ</b></a>
+									<a class="sp-old-price-limited"><s>2,641,000 đ</s></a>
+								</div>
+								<input class="btn-muangay" type="button" value="MUA NGAY"></input>
+							</div>
+					
+							<div class="sp-item-limited tu1-5trieu">
+								<a href="#"><img class="anh-sp-limited" src="Anh/GA-700AR-1A.png" /></a>
+								<div class="trangthai-sp-new-limited">
+									<a>Limited</a>
+								</div>
+								<div class="sp-info-limited">
+									<a href="#" class="sp-name-limited">GA-700AR-1A</a><br />
+									<a class="sp-new-price-limited"><b>3,083,800 đ</b></a>
+									<a class="sp-old-price-limited"><s>3,628,000 đ</s></a>
+								</div>
+								<input class="btn-muangay" type="button" value="MUA NGAY"></input>
+							</div>
+					
+							<div class="sp-item-limited tu5-10trieu">
+								<a href="#"><img class="anh-sp-limited" src="Anh/GA-140AR-1A.png" /></a>
+								<div class="trangthai-sp-new-limited">
+									<a>Limited</a>
+								</div>
+								<div class="sp-info-limited">
+									<a href="#" class="sp-name-limited">GA-140AR-1A</a><br />
+									<a class="sp-new-price-limited"><b>5,314,150 đ</b></a>
+									<a class="sp-old-price-limited"><s>3,899,000 đ</s></a>
+								</div>
+								<input class="btn-muangay" type="button" value="MUA NGAY"></input>
+							</div>
+							
+							<div class="sp-item-limited tren10trieu">
+								<a href="#"><img class="anh-sp-limited" src="Anh/ECB-900TR-2A.png" /></a>
+								<div class="trangthai-sp-hot-limited">
+									<a>Limited</a>
+								</div>
+								<div class="sp-info-limited">
+									<a href="#" class="sp-name-limited">ECB-900TR-2A</a><br />
+									<a class="sp-new-price-limited"><b>10,364,000 đ</b></a>
+									<a class="sp-old-price-limited"><s>12,567,000 đ</s></a>
+								</div>
+								<input class="btn-muangay" type="button" value="MUA NGAY"></input>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<script src="Js/java_limited.js"></script>
+			
+			<!--footer-->
+			<div id="footer">
+				<div id="info-website">
+				
+					<!--info 1-->
+					<div id="info1">
+						<span><b>CASIO HOÀNG PHÚ</b></span><br />
+						<a>Địa chỉ: Số 2/24/441, Phường Bình Hàng, Thành phố Hải Dương.</a><br /><br />
+						<a>Tư vấn mua hàng (8:00-17:00): 1900.111.222 (Phím 1) </a><br /><br />
+						<a>Chăm sóc khách hàng: 1900.111.222 (Phím 2) </a><br /><br />
+						<a>Gmail: donghohoangphu@gmail.com</a>
+					</div>
+					
+					<!--info 2-->
+					<div id="info2">
+						<span><b>THÔNG TIN</b></span><br />
+						<a href="gioithieu.html">Giới thiệu</a><br /><br />
+						<a href="#">Lịch sử hình thành </a><br /><br />
+						<a href="#">Tầm nhìn và sứ mệnh</a><br /><br />
+						<a href="#">Website Casio</a>
+					</div>
+					
+					<!--info 3-->
+					<div id="info2">
+						<span><b>HỖ TRỢ</b></span><br />
+						<a href="#">Hướng dẫn thanh toán</a><br /><br />
+						<a href="#">Hướng dẫn mua hàng online</a><br /><br />
+						<a href="#">Chính sách khách hàng thân thiết</a><br /><br />
+					</div>
+					
+					<!--info 4-->
+					<div id="info2">
+						<span><b>CHÍNH SÁCH</b></span><br />
+						<a href="#">Điều khoản dịch vụ</a><br /><br />
+						<a href="#">Quy định đổi trả</a><br /><br />
+						<a href="#">Quy định bảo hành</a><br /><br />
+						<a href="#">Trung tâm bảo hành</a><br /><br />
+						<a href="#">Chính sách bảo mật</a>
+					</div>
+					
+					<img id="anh-logo-casio" src="Anh/logo-casio.png"/>
+					<img id="anh-pay" src="Anh/payment.png"/>
+				</div>
+			</div>
+			
+			<div id="banquyen">
+				<div id="copyright">
+					<a href="index.html"><img id="logo-banquyen" src="Anh/logo.png" /></a>
+					<a>@Bản quyền thuộc về CASIO Hoàng Phú - Developed by ĐạtNT.</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
